@@ -4,7 +4,7 @@ import MostPicked from "./Components/MostPicked";
 import Search from "./Components/Search";
 import RoomRegisterPage from "./Components/RoomRegisterPage";
 import Housecard from "./house/Housecard";
-import BookingPage from "./Components/PaymentConfirmation/BookingPage";
+import BookingPage from "./paymentpage1/page";
 import DocumentDashboard from "./documentdashboard/page";
 import DocumentLayout from "./documentdashboard/Layout";
 import Dashboard from "./dashboard/page";

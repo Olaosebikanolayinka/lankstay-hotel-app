@@ -1,7 +1,8 @@
 "use client";
 import React from 'react'
 import { useState } from 'react';
-import Button from '../Button';
+import Button from '../Components/Button';
+import Link from 'next/link';
 
 const BookingPage = () => {
         const [days, setDays] = useState(2);
@@ -83,8 +84,13 @@ const BookingPage = () => {
           
       </div>
        <div className="mt-10 flex flex-col items-center space-y-4">
+        <Link href="../paymentpge2">
         <Button title='Book Now' type='submit' />
+         </Link>
+
+         <Link href="../bookingdocument">
        <button className='bg-[#F5F6F8] text-[#B3B3B3] font-medium px-5 py-1 rounded-md hover:bg-gray-500 hover:text-white transition duration-300 ease-in-out flex items-center gap-2'>Cancel</button>
+       </Link>
       </div>
       </div>
           

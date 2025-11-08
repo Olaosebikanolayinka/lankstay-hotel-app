@@ -14,6 +14,8 @@ import {
 import { useState } from "react";
 import Sidebar from "../Components/SideBar";
 import Topbar from "../Components/TopBar";
+import Link from "next/link";
+import Button from "../Components/Button";
 
 export default function BookingsPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -113,51 +115,54 @@ export default function BookingsPage() {
             </p>
 
             {/* Booking Card Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rooms.map((room, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden"
-                >
-                  <div className="relative">
-                    <img
-                      src="../Blueoriginfam.png"
-                      alt={room.name}
-                      className="w-full h-100 object-cover"
-                    />
-                    <span className="absolute top-0 right-0 bg-[#3252DF] text-white text-xs px-3 py-1 rounded">
-                      $200 per night
-                    </span>
-                  </div>
+            {/* Booking Card Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {rooms.map((room, i) => (
+          <div
+      key={i}
+      className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden"
+    >
+      <div className="relative">
+        <img
+          src="../Blueoriginfam.png"
+          alt={room.name}
+          className="w-full h-100 object-cover"
+        />
+        <span className="absolute top-0 right-0 bg-[#3252DF] text-white text-xs px-3 py-1 rounded">
+          $200 per night
+        </span>
+      </div>
 
-                  <div className="p-4 space-y-2">
-                    <p className="font-semibold text-gray-800">
-                      {room.name}
-                    </p>
-                    <p className="text-gray-500 text-sm">
-                      Galle, Sri Lanka
-                    </p>
-                    <div className="text-sm text-gray-600">
-                      <p>{room.date}</p>
-                      <p>{room.nights}</p>
-                      <p>{room.desc}</p>
-                      <p>Initial Payment {room.initial}</p>
-                      <p>Total Payment {room.total}</p>
-                    </div>
+      <div className="p-4 space-y-2">
+        <p className="font-semibold text-gray-800">{room.name}</p>
+        <p className="text-gray-500 text-sm">Galle, Sri Lanka</p>
+        <div className="text-sm text-gray-600">
+          <p>{room.date}</p>
+          <p>{room.nights}</p>
+          <p>{room.desc}</p>
+          <p>Initial Payment {room.initial}</p>
+          <p>Total Payment {room.total}</p>
+        </div>
 
-                    {/* Edit & Delete */}
-                    <div className="flex justify-end gap-2 pt-2">
-                      <button className="p-1 hover:bg-gray-100 rounded">
-                        <Edit className="w-4 h-4 text-gray-500" />
-                      </button>
-                      <button className="p-1 hover:bg-gray-100 rounded">
-                        <Trash2 className="w-4 h-4 text-gray-500" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Book Now Button */}
+        <Link href="../paymentpage1">
+        <Button title='Book Now' type='submit' />
+        </Link>
+
+        {/* Edit & Delete */}
+        <div className="flex justify-end gap-2 pt-2">
+          <button className="p-1 hover:bg-gray-100 rounded">
+            <Edit className="w-4 h-4 text-gray-500" />
+          </button>
+          <button className="p-1 hover:bg-gray-100 rounded">
+            <Trash2 className="w-4 h-4 text-gray-500" />
+          </button>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
           </div>
         </section>
       </main>
