@@ -73,9 +73,6 @@ export const PLACES = [
 const House = () => {
   return (
     <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-20 bg-white  mx-auto w-full">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#152C5B] mb-8 md:mb-10">
-        Most Picked
-      </h2>
 
       {/* GRID LAYOUT */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
