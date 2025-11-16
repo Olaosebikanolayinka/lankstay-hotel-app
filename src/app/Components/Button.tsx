@@ -9,9 +9,10 @@ type ButtonProps = {
   icons?: React.ReactNode;
   href?: string;
   onClick?: () => void;    
+  className?: string;
 }
 
-const Button = ({ type, title, icons, href, onClick }: ButtonProps) => {
+const Button = ({ type, title, icons, href, onClick, className = '' }: ButtonProps) => {
   const router = useRouter()
 
   const handleClick = () => {
@@ -30,22 +31,11 @@ const Button = ({ type, title, icons, href, onClick }: ButtonProps) => {
   )
 
 
-  if (href) {
-    return (
-      <button
-        className="bg-[#3252DF] text-white font-medium px-5 py-1 rounded-md hover:bg-[#152C5B] transition duration-300 ease-in-out flex items-center gap-2"
-        type={type}
-        onClick={handleClick}
-      >
-        {buttonContent}
-      </button>
-    )
-  }
-
+  const baseClasses = 'bg-[#3252DF] text-white font-medium px-5 py-2 rounded-md hover:bg-[#152C5B] transition duration-300 ease-in-out flex items-center gap-2'
 
   return (
     <button
-      className="bg-[#3252DF] text-white font-medium px-5 py-1 rounded-md hover:bg-[#152C5B] transition duration-300 ease-in-out flex items-center gap-2"
+      className={`${baseClasses} ${className}`.trim()}
       type={type}
       onClick={handleClick}
     >

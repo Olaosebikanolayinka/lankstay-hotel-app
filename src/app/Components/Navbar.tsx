@@ -40,9 +40,7 @@ const Navbar = () => {
         })}
 
         <div className='hidden lg:flex gap-8'>
-          <Link href="../login">
-          <Button type='submit' title='Log in' />
-          </Link>
+          <Button type='submit' title='Log in' href="/login" className='block w-full text-center' />
         </div>
       </ul>
 
@@ -82,8 +80,12 @@ const Navbar = () => {
                 </Link>
               )
             })}
-            <div className='pt-2'>
-              <Button title="Log in" href="/LoginPage" />
+            <div className='pt-2 space-y-2'>
+              <Button title="Log in" href="/login" className='w-full text-center items-center' />
+
+              <Link href="/register" className='block w-full text-center bg-white text-[#3252DF] border border-[#3252DF] px-4 py-2 rounded-md font-medium hover:bg-[#f8fbff]'>
+                Sign up
+              </Link>
             </div>
           </div>
         </div>

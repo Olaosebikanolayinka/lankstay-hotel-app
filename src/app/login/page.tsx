@@ -9,7 +9,7 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-gray-50  px-25 py-20 rounded-2xl">
+    <div className="min-h-screen flex flex-col md:flex-row bg-gray-50 px-4 sm:px-6 lg:px-20 py-10">
         <div
   className="relative w-full md:w-1/2 h-56 sm:h-64 md:h-auto bg-cover bg-center flex items-center justify-center p-4 sm:p-8 md:p-10"
   style={{
@@ -24,8 +24,8 @@ const LoginPage = () => {
 </div>
 
 
-    <div className="flex-1 flex items-center justify-center px-6 sm:px-10 md:px-12 lg:px-20 py-10 md:py-16 bg-white">
-        <div className="w-full max-w-md sm:max-w-lg lg:max-w-md">
+    <div className="w-full md:w-1/2 flex items-center justify-center px-4 sm:px-8 md:px-10 py-8 bg-white">
+        <div className="w-full max-w-md sm:max-w-lg">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-8 text-center md:text-left">
             Create Account
           </h2>
@@ -61,20 +61,19 @@ const LoginPage = () => {
               .
             </p>
             
-            <Link href="../dashboard">
-            <button
-              type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 sm:py-3 rounded-md transition"
-            >
-              Login
-            </button>
-          </Link>
+            <div className="space-y-3">
+              <Link href="../dashboard" className="w-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 sm:py-3 rounded-md transition">
+                Login
+              </Link>
+
+              <Link href="../register" className="w-full flex items-center justify-center bg-white border border-blue-600 text-blue-600 font-semibold py-2.5 sm:py-3 rounded-md hover:bg-blue-50 transition">
+                Sign up
+              </Link>
+            </div>
           </form>
 
           
-            <a href="../register" className="text-blue-600 hover:text-[#152C5B] items-center justify-center flex mt-6">
-              Create Account
-            </a>
+          
           
     </div>
     </div>
