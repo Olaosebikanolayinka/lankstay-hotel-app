@@ -45,7 +45,7 @@ export default function MostPicked() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6 auto-rows-max">
         
         {/* BIG LEFT CARD */}
-        <div className="lg:row-span-2 relative group w-full h-48 sm:h-56 md:h-64 lg:h-[500px] rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div className="lg:row-span-2 relative group w-full aspect-square sm:aspect-square md:aspect-square lg:aspect-auto lg:h-[500px] rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
           <Image
             src={places[0].image}
             alt={places[0].title}
@@ -68,7 +68,7 @@ export default function MostPicked() {
         {places.slice(1).map((p, i) => (
           <div
             key={i}
-            className="relative group w-full h-40 sm:h-48 md:h-56 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="relative group w-full aspect-video sm:aspect-video md:aspect-video rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             <Image
               src={p.image}

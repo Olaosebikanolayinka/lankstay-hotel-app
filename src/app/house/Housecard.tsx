@@ -16,7 +16,7 @@ const Housecard: React.FC<HousecardProps> = ({ place }) => {
   return (
     <article className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
 
-      <div className="relative w-full h-40 sm:h-48 md:h-56 overflow-hidden">
+      <div className="relative w-full aspect-video overflow-hidden">
         {/* Popular Choice badge for id 1 and 8 */}
         {(place.id === 1 || place.id === 8) && (
           <span className="absolute top-0 right-0 z-10 bg-[#3252DF] text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-bl-2xl shadow-lg">
